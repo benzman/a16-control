@@ -104,3 +104,8 @@ uv run pytest
 python3 tools/gen_protocol.py            # nach Änderungen an a16_protocol.json
 python3 tools/a16cli.py 192.168.1.53 status
 ```
+
+## Lizenz
+
+MIT – siehe [LICENSE](LICENSE). Kein offizielles Produkt von Smyth Research; Nutzung auf
+eigene Gefahr.
