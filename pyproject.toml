@@ -1,6 +1,6 @@
 [project]
 name = "realiser-a16-control"
-version = "1.0.0"
+version = "0.1.0"
 description = "Home Assistant integration and protocol library for the Smyth Realiser A16"
 requires-python = ">=3.13"
 license = "MIT"

@@ -117,7 +117,7 @@ async def test_entities(hass: HomeAssistant, entry: MockConfigEntry):
 
 
 async def test_card_is_served(hass: HomeAssistant, entry: MockConfigEntry, card_urls, hass_client):
-    assert card_urls == ["/realiser_a16_frontend/realiser-a16-card.js?v=1.0.0"]
+    assert card_urls == ["/realiser_a16_frontend/realiser-a16-card.js?v=0.1.0"]
     http = await hass_client()
     for name in ("realiser-a16-card.js", "protocol_gen.js"):
         response = await http.get(f"/realiser_a16_frontend/{name}")
