@@ -1,0 +1,219 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Mit dem Realiser A16 verbinden",
+        "description": "Am A16 unter Settings → Network den „TCP command server“ einschalten und dessen feste IP-Adresse und Port hier eintragen. „TCP slave response“ sollte ebenfalls eingeschaltet sein.",
+        "data": {
+          "host": "IP-Adresse",
+          "port": "Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Keine Antwort vom A16. Adresse und Port prüfen und ob der TCP command server eingeschaltet ist. Der A16 nimmt nur eine Verbindung gleichzeitig an."
+    },
+    "abort": {
+      "already_configured": "Dieser A16 ist bereits eingerichtet"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "speaker_switches": "Für jeden Lautsprecher einen Schalter anlegen"
+        }
+      }
+    }
+  },
+  "entity": {
+    "media_player": {
+      "user_a": {
+        "name": "Benutzer A"
+      },
+      "user_b": {
+        "name": "Benutzer B"
+      }
+    },
+    "select": {
+      "source": {
+        "name": "Quelle"
+      },
+      "preset_a": {
+        "name": "Benutzer A Preset"
+      },
+      "preset_b": {
+        "name": "Benutzer B Preset"
+      },
+      "solo_mode": {
+        "name": "Lautsprecher-Tippmodus",
+        "state": {
+          "solo": "Solo",
+          "mute": "Stumm"
+        }
+      }
+    },
+    "switch": {
+      "power": {
+        "name": "Power"
+      },
+      "mute_a": {
+        "name": "Benutzer A stumm"
+      },
+      "mute_b": {
+        "name": "Benutzer B stumm"
+      },
+      "test": {
+        "name": "Testsignal"
+      },
+      "head_tracker": {
+        "name": "Head tracker"
+      },
+      "speaker": {
+        "name": "Lautsprecher {name}"
+      }
+    },
+    "button": {
+      "headphone_mode": {
+        "name": "Kopfhörermodus (SVS)"
+      },
+      "speaker_mode": {
+        "name": "Lautsprechermodus (AV/MIX/SVS)"
+      },
+      "reset_levels": {
+        "name": "Pegelanzeigen zurücksetzen"
+      },
+      "refresh": {
+        "name": "Aktualisieren"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Verbindung"
+      },
+      "tactile_a": {
+        "name": "Benutzer A Tactile-Ausgang"
+      },
+      "tactile_b": {
+        "name": "Benutzer B Tactile-Ausgang"
+      }
+    },
+    "sensor": {
+      "decoder": {
+        "name": "Audio-Decoder"
+      },
+      "format": {
+        "name": "Audioformat"
+      },
+      "upmixer": {
+        "name": "Upmixer"
+      },
+      "legacy": {
+        "name": "Legacy-Modus"
+      },
+      "user_mode": {
+        "name": "Benutzermodus"
+      },
+      "ht_mode": {
+        "name": "Head-Tracker-Modus"
+      },
+      "mode": {
+        "name": "Wiedergabemodus"
+      },
+      "menu_page": {
+        "name": "Menüseite"
+      },
+      "firmware_a16": {
+        "name": "A16-Firmware"
+      },
+      "firmware_apm": {
+        "name": "APM-Firmware"
+      },
+      "firmware_hsr": {
+        "name": "HSR-Firmware"
+      },
+      "firmware_ht": {
+        "name": "Head-Tracker-Firmware"
+      },
+      "serial_number": {
+        "name": "Seriennummer"
+      },
+      "name_a": {
+        "name": "Benutzer A Benutzername"
+      },
+      "room_a": {
+        "name": "Benutzer A Hörraum"
+      },
+      "layout_a": {
+        "name": "Benutzer A Layout"
+      },
+      "headphone_a": {
+        "name": "Benutzer A Kopfhörer"
+      },
+      "tri_level_a": {
+        "name": "Benutzer A Tri-Level"
+      },
+      "subject_a": {
+        "name": "Benutzer A Subject"
+      },
+      "hpeq_file_a": {
+        "name": "Benutzer A HPEQ-Datei"
+      },
+      "hpeq_subject_a": {
+        "name": "Benutzer A HPEQ-Subject"
+      },
+      "hpeq_date_a": {
+        "name": "Benutzer A HPEQ-Datum"
+      },
+      "hpeq_type_a": {
+        "name": "Benutzer A HPEQ-Typ"
+      },
+      "name_b": {
+        "name": "Benutzer B Benutzername"
+      },
+      "room_b": {
+        "name": "Benutzer B Hörraum"
+      },
+      "layout_b": {
+        "name": "Benutzer B Layout"
+      },
+      "headphone_b": {
+        "name": "Benutzer B Kopfhörer"
+      },
+      "tri_level_b": {
+        "name": "Benutzer B Tri-Level"
+      },
+      "subject_b": {
+        "name": "Benutzer B Subject"
+      },
+      "hpeq_file_b": {
+        "name": "Benutzer B HPEQ-Datei"
+      },
+      "hpeq_subject_b": {
+        "name": "Benutzer B HPEQ-Subject"
+      },
+      "hpeq_date_b": {
+        "name": "Benutzer B HPEQ-Datum"
+      },
+      "hpeq_type_b": {
+        "name": "Benutzer B HPEQ-Typ"
+      }
+    }
+  },
+  "services": {
+    "send_command": {
+      "name": "Befehl senden",
+      "description": "Sendet einen oder mehrere Befehle an den A16.",
+      "fields": {
+        "command": {
+          "name": "Befehl",
+          "description": "Tasten- oder Befehlsnamen (menu, enter, vol_a_up, source_hdmi1, preset_a_3, speaker_12, power_on) oder Rohcodes (0x43)."
+        },
+        "entry_id": {
+          "name": "Konfigurationseintrag",
+          "description": "Nur bei mehr als einem A16 nötig."
+        }
+      }
+    }
+  }
+}

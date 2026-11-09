@@ -1,0 +1,219 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to the Realiser A16",
+        "description": "Enable \"TCP command server\" on the A16 under Settings → Network and enter its fixed IP address and port. \"TCP slave response\" should be switched on as well.",
+        "data": {
+          "host": "IP address",
+          "port": "Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No answer from the A16. Check address, port and that the TCP command server is enabled. The A16 accepts only one connection at a time."
+    },
+    "abort": {
+      "already_configured": "This A16 is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "speaker_switches": "Create a switch entity for every speaker"
+        }
+      }
+    }
+  },
+  "entity": {
+    "media_player": {
+      "user_a": {
+        "name": "User A"
+      },
+      "user_b": {
+        "name": "User B"
+      }
+    },
+    "select": {
+      "source": {
+        "name": "Source"
+      },
+      "preset_a": {
+        "name": "User A Preset"
+      },
+      "preset_b": {
+        "name": "User B Preset"
+      },
+      "solo_mode": {
+        "name": "Speaker tap mode",
+        "state": {
+          "solo": "Solo",
+          "mute": "Mute"
+        }
+      }
+    },
+    "switch": {
+      "power": {
+        "name": "Power"
+      },
+      "mute_a": {
+        "name": "User A mute"
+      },
+      "mute_b": {
+        "name": "User B mute"
+      },
+      "test": {
+        "name": "Test signal"
+      },
+      "head_tracker": {
+        "name": "Head tracker"
+      },
+      "speaker": {
+        "name": "Speaker {name}"
+      }
+    },
+    "button": {
+      "headphone_mode": {
+        "name": "Headphone mode (SVS)"
+      },
+      "speaker_mode": {
+        "name": "Speaker mode (AV/MIX/SVS)"
+      },
+      "reset_levels": {
+        "name": "Reset level meters"
+      },
+      "refresh": {
+        "name": "Refresh"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Connection"
+      },
+      "tactile_a": {
+        "name": "User A tactile output"
+      },
+      "tactile_b": {
+        "name": "User B tactile output"
+      }
+    },
+    "sensor": {
+      "decoder": {
+        "name": "Audio decoder"
+      },
+      "format": {
+        "name": "Audio format"
+      },
+      "upmixer": {
+        "name": "Upmixer"
+      },
+      "legacy": {
+        "name": "Legacy mode"
+      },
+      "user_mode": {
+        "name": "User mode"
+      },
+      "ht_mode": {
+        "name": "Head tracker mode"
+      },
+      "mode": {
+        "name": "Playback mode"
+      },
+      "menu_page": {
+        "name": "Menu page"
+      },
+      "firmware_a16": {
+        "name": "A16 firmware"
+      },
+      "firmware_apm": {
+        "name": "APM firmware"
+      },
+      "firmware_hsr": {
+        "name": "HSR firmware"
+      },
+      "firmware_ht": {
+        "name": "Head tracker firmware"
+      },
+      "serial_number": {
+        "name": "Serial number"
+      },
+      "name_a": {
+        "name": "User A user name"
+      },
+      "room_a": {
+        "name": "User A listening room"
+      },
+      "layout_a": {
+        "name": "User A layout"
+      },
+      "headphone_a": {
+        "name": "User A headphone"
+      },
+      "tri_level_a": {
+        "name": "User A tri-level"
+      },
+      "subject_a": {
+        "name": "User A subject"
+      },
+      "hpeq_file_a": {
+        "name": "User A HPEQ file"
+      },
+      "hpeq_subject_a": {
+        "name": "User A HPEQ subject"
+      },
+      "hpeq_date_a": {
+        "name": "User A HPEQ date"
+      },
+      "hpeq_type_a": {
+        "name": "User A HPEQ type"
+      },
+      "name_b": {
+        "name": "User B user name"
+      },
+      "room_b": {
+        "name": "User B listening room"
+      },
+      "layout_b": {
+        "name": "User B layout"
+      },
+      "headphone_b": {
+        "name": "User B headphone"
+      },
+      "tri_level_b": {
+        "name": "User B tri-level"
+      },
+      "subject_b": {
+        "name": "User B subject"
+      },
+      "hpeq_file_b": {
+        "name": "User B HPEQ file"
+      },
+      "hpeq_subject_b": {
+        "name": "User B HPEQ subject"
+      },
+      "hpeq_date_b": {
+        "name": "User B HPEQ date"
+      },
+      "hpeq_type_b": {
+        "name": "User B HPEQ type"
+      }
+    }
+  },
+  "services": {
+    "send_command": {
+      "name": "Send command",
+      "description": "Sends one or more commands to the A16.",
+      "fields": {
+        "command": {
+          "name": "Command",
+          "description": "Key or command names (menu, enter, vol_a_up, source_hdmi1, preset_a_3, speaker_12, power_on) or raw codes (0x43)."
+        },
+        "entry_id": {
+          "name": "Config entry",
+          "description": "Only needed with more than one A16."
+        }
+      }
+    }
+  }
+}

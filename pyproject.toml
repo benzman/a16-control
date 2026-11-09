@@ -1,0 +1,17 @@
+[project]
+name = "realiser-a16-control"
+version = "1.0.0"
+description = "Home Assistant integration and protocol library for the Smyth Realiser A16"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest-homeassistant-custom-component", "ruff"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["esp32"]

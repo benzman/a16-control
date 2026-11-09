@@ -1,0 +1,13 @@
+{
+  "domain": "realiser_a16",
+  "name": "Smyth Realiser A16",
+  "codeowners": ["@benzman"],
+  "config_flow": true,
+  "dependencies": ["http", "frontend", "websocket_api"],
+  "documentation": "https://github.com/benzman/a16-control",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/benzman/a16-control/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
